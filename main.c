@@ -52,13 +52,13 @@ int main(int ac, char** av)
     unsigned char* replace_seq;
 
     if (ac != 4) {
-        fprintf(stderr, "[USAGE] - ./byteswitch <seeked bytes sequence> <replace bytes sequence> <binary_file>\n");
+        fprintf(stderr, "[USAGE] - ./byteswitch <old sequence> <new sequence> <binary_file>\n");
         exit(EXIT_FAILURE);
     }
 
     int arg_len = strlen(av[1]);
     if (arg_len % 2 != 0 || arg_len != strlen(av[2])) {
-        fprintf(stderr, "arg's len should have same size\n");
+        fprintf(stderr, "arg's length should be the same\n");
         exit(EXIT_FAILURE);
     }
 
